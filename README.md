@@ -1,4 +1,4 @@
-# Kediler ve Köpekler CNN Sınıflandırıcı
+# Cats vs Dogs CNN Classfier
 
 Bu proje, resimleri kedi veya köpek olarak sınıflandırmak için bir Evrişimli Sinir Ağı (CNN) uygular. Model TensorFlow/Keras kullanılarak oluşturulmuş olup, fotoğraflardaki kediler ile köpekleri yüksek doğrulukla ayırt edebilmektedir.
 
