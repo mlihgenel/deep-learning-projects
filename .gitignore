@@ -6,4 +6,4 @@ __pycache__/
 
 # Dataset ve büyük dosyalar
 CATS_DOGS/
-*.zip
+# *.zip
