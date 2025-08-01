@@ -54,14 +54,23 @@ for layer in base_model.layers[:fine_tune_at]:
 x = base_model.output
 x = GlobalAveragePooling2D()(x)
 
-x = Dense(256, activation='relu')(x)
-x = Dropout(0.2)(x)
-x = Dense(128, activation='relu')(x)
-x = Dropout(0.2)(x)
-x = Dense(64, activation='relu')(x)
-x = Dropout(0.2)(x)
+x = Dense(256)(x)
+x = BatchNormalization()(x)
+x = Activation('relu')(x)
+x = Dropout(0.3)(x)
 
-outputs = Dense(6, activation='softmax')(x)
+x = Dense(128)(x)
+x = BatchNormalization()(x)
+x = Activation('relu')(x)
+x = Dropout(0.3)(x)
+
+x = Dense(64)(x)
+x = BatchNormalization()(x)
+x = Activation('relu')(x)
+x = Dropout(0.3)(x)
+
+outputs = Dense(6)(x)
+outputs = Activation('softmax')(outputs)
 
 model = Model(inputs=inputs, outputs=outputs)
 ```
@@ -153,18 +162,20 @@ model = Model(inputs=inputs, outputs=outputs)
 #### Örnek Eğitim Çıktıları 
 
 ```
-Epoch 5: val_loss improved from 0.95861 to 0.82352, saving model to /content/drive/MyDrive/weather_classification/best_model.keras
-43/43 ━━━━━━━━━━━━━━━━━━━━ 9s 207ms/step - accuracy: 0.5269 - loss: 1.2423 - val_accuracy: 0.7063 - val_loss: 0.8235
+Epoch 5/50
+43/43 ━━━━━━━━━━━━━━━━━━━━ 0s 159ms/step - accuracy: 0.4549 - loss: 1.3796
+Epoch 5: val_loss improved from 1.24472 to 1.02865, saving model to /content/drive/MyDrive/weather_classification/best_model.keras
+43/43 ━━━━━━━━━━━━━━━━━━━━ 10s 226ms/step - accuracy: 0.4552 - loss: 1.3789 - val_accuracy: 0.6399 - val_loss: 1.0286
 Epoch 6/50
-43/43 ━━━━━━━━━━━━━━━━━━━━ 0s 165ms/step - accuracy: 0.6056 - loss: 1.0779
-Epoch 6: val_loss improved from 0.82352 to 0.67996, saving model to /content/drive/MyDrive/weather_classification/best_model.keras
-43/43 ━━━━━━━━━━━━━━━━━━━━ 10s 232ms/step - accuracy: 0.6059 - loss: 1.0769 - val_accuracy: 0.7587 - val_loss: 0.6800
+43/43 ━━━━━━━━━━━━━━━━━━━━ 0s 162ms/step - accuracy: 0.4960 - loss: 1.3274
+Epoch 6: val_loss improved from 1.02865 to 0.93046, saving model to /content/drive/MyDrive/weather_classification/best_model.keras
+43/43 ━━━━━━━━━━━━━━━━━━━━ 9s 206ms/step - accuracy: 0.4963 - loss: 1.3266 - val_accuracy: 0.7098 - val_loss: 0.9305
 Epoch 7/50
 ...
-Epoch 22/50
-43/43 ━━━━━━━━━━━━━━━━━━━━ 0s 163ms/step - accuracy: 0.8894 - loss: 0.3148
-Epoch 22: val_loss did not improve from 0.28743
-43/43 ━━━━━━━━━━━━━━━━━━━━ 8s 194ms/step - accuracy: 0.8893 - loss: 0.3154 - val_accuracy: 0.8916 - val_loss: 0.3452
+Epoch 39/50
+43/43 ━━━━━━━━━━━━━━━━━━━━ 0s 166ms/step - accuracy: 0.8950 - loss: 0.4088
+Epoch 39: val_loss did not improve from 0.27755
+43/43 ━━━━━━━━━━━━━━━━━━━━ 8s 196ms/step - accuracy: 0.8950 - loss: 0.4095 - val_accuracy: 0.9196 - val_loss: 0.2781
 ```
 
 ## Veri Artırma (Data Augmentation)
