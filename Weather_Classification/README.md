@@ -133,9 +133,12 @@ model = Model(inputs=inputs, outputs=outputs)
 ## Eğitim Sonuçları 
 
 ### Train & Validation Accuracy 
+
 ![Accuracy_Graph](assests/acc-graph.png)
 
+
 ### Train & Validation Loss 
+
 ![Loss_Graph](assests/loss-graph.png)
 
 ### Confusion Matrix 
