@@ -3,6 +3,11 @@
 Bu proje VGG16 mimarisini baz alarak transfer learning metoduyla sınıflandırma yapan CNN modelidir. Model Tensorflow/Keras kullanıralarak eğitilmiş olup hava durumu veriseti ile birlikte hava durumunu ayırt edebilmektedir. 
 
 ---
+
+![sonuc](assests/results.jpg)
+
+--- 
+
 ## Veri Seti 
 
 Verisetini doğrudan `dataset/dataset.zip` dosya yolundan indirip çıkarabilirsiniz. Veriseti train-test-validation olarak ayrılmış durumdadır. 
