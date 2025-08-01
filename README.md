@@ -12,6 +12,7 @@ Bu repo, Deep Learning öğrenme sürecimde yaptığım projeleri bir araya geti
 |--------------------------|----------------------------------------------------------------------------------------------|----------------------------------|
 | **Cats vs Dogs CNN Classfier**      | Kedi ve köpek resimlerinde oluşan veriseti üzerinde bir CNN modeli eğitimi ve sınıflandırması.  | [Cats vs Dogs CNN Classfier](./Cats_vs_Dogs_CNN)       |
 | **Garbage Classification**         | Kağıt, cam, metal, plastik ve karton gibi nesnelerden oluşanGarbage veriseti üzerinde Transfer Learning(MobileNetV2) yöntemi ile bir CNN modeli eğitimi ve sınıflandırması.         | [Garbage Classification](./Garbage_Classification)             |
+|**Weather Classification** |Hava durumu fotoğraflarını içeren veriseti üzerinde VGG16 tabanlı sınıflandırma modeli |[Weather Classification](./Weather_Classification/) |
 
 ---
 
