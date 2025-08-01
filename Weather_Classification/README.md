@@ -4,7 +4,7 @@ Bu proje VGG16 mimarisini baz alarak transfer learning metoduyla sınıflandırm
 
 ---
 
-![sonuc](assests/results.jpg)
+![sonuc](assests/result_img.jpg)
 
 --- 
 
